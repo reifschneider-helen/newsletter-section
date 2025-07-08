@@ -97,30 +97,54 @@ button:focus {
   border-width: 0;
 }
 
-@media (max-width: 900px) {
- img {
+@media (max-width: 1120px) {
+  .App {
+    padding: 64px;
+  }
+  .left-column {
+    width: 100%;
+  }
+  .right-column {
+    margin-left: 0;
+  }
+  img {
     width: 100%;
     min-width: 400px;
     height: auto;
-  } 
-
+  }
   h1 {
     font-size: 52px;
   }
-
   .subscribe-form {
-    width: 70%;
+    width: 80%;
   }
-
   .right-column {
     margin-left: 64px;
   }
 }
 
-@media (max-width: 768px), (max-width: 375px) {
+@media (max-width: 950px) {
+  .App {
+    padding: 52px;
+  }
+  img {
+    width: 100%;
+    min-width: 300px;
+    height: auto;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  .right-column {
+    margin-left: 32px;
+  }
+}
+
+@media (max-width: 768px) {
   .App {
     flex-direction: column;
     align-items: start;
+    padding: 32px;
   }
   .right-column {
     margin-left: 0;
@@ -128,12 +152,9 @@ button:focus {
   img {
     max-width: 100%;
     height: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .App {
-    padding: 32px;
+    width: unset;
+    min-width: unset;
+    border-radius: 16px;
   }
   h1 {
     font-size: 48px;
