@@ -2,7 +2,7 @@
   "name": "newsletter-section",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/reifschneider-helen/newsletter-section",
+  "homepage": "https://reifschneider-helen.github.io/newsletter-section",
   "description": "A simple newsletter subscription section for a website.",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
