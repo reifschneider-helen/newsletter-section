@@ -118,7 +118,7 @@ function App() {
       </div>
       <div className="right-column">
         <img
-          src="/assets/img/abstract.jpg"
+          src={process.env.PUBLIC_URL + "/assets/img/abstract.jpg"}
           width="500"
           alt="abstract image"
         ></img>
