@@ -6,10 +6,12 @@ function App() {
     type: "success" | "error";
     text: string;
   }>(null);
+  const [validationMessage, setValidationMessage] = useState<string>("");
+  const basicEmailRegex = /^[^\s@]+@[^\s@]+/;
 
   const isValidEmail = (email: string) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-    return re.test(String(email).toLowerCase());
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    return emailRegex.test(String(email).toLowerCase());
   };
 
   const showSuccessMessage = () => {
@@ -17,7 +19,7 @@ function App() {
       type: "success",
       text: "Subscription successful! Please check your email to confirm.",
     });
-    // setTimeout(() => setMessage(null), 5000);
+    setTimeout(() => setMessage(null), 5000);
   };
 
   const showErrorMessage = (text: string) => {
@@ -25,13 +27,32 @@ function App() {
       type: "error",
       text: text,
     });
-    // setTimeout(() => setMessage(null), 5000);
+    setTimeout(() => setMessage(null), 5000);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const email = form.email.value;
+
+    if (!email) {
+      setValidationMessage("Email address is required.");
+      return;
+    }
+
+    if (!basicEmailRegex.test(email)) {
+      setValidationMessage("Please enter a valid email address.");
+      return;
+    }
+
+    setValidationMessage("");
+
+    if (!isValidEmail(email)) {
+      showErrorMessage(
+        "Failed to subscribe. Please check your email or try again later."
+      );
+      return;
+    }
 
     try {
       const response = await fetch(
@@ -43,17 +64,15 @@ function App() {
         }
       );
 
-      if (response.ok && isValidEmail(email)) {
+      if (response.ok) {
         showSuccessMessage();
       } else {
         showErrorMessage(
-          "Failed to subscribe. Please check your email or try again later."
+          "An Internal Server Error occurred. Please try again later."
         );
       }
     } catch (error) {
-      showErrorMessage(
-        "An Internal Server Error occurred. Please try again later."
-      );
+      showErrorMessage(`An Internal Server Error occurred. ${error}`);
     }
   };
 
@@ -87,13 +106,14 @@ function App() {
               autoComplete="email"
               id="email-input"
               name="email"
-              required
-              type="email"
               placeholder="Enter your email"
             ></input>
             <button>Subscribe</button>
           </form>
         </div>
+        {validationMessage && (
+          <span className="validationMessage">{validationMessage}</span>
+        )}
         <p className="disclaimer">We only send the best! No spam.</p>
       </div>
       <div className="right-column">

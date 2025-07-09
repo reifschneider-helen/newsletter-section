@@ -100,7 +100,7 @@ button:focus {
 .success-window,
 .error-window {
   position: fixed;
-  top: 2%;
+  top: 5%;
   left: 50%;
   padding: 6px 12px 6px 6px;
   border-radius: 24px;
@@ -113,8 +113,7 @@ button:focus {
 
 .success-window {
   color: #16803e;
-  /* background-color: #effdf4; */
-  background-color: black;
+  background-color: #effdf4;
 }
 
 .error-window {
@@ -126,6 +125,12 @@ button:focus {
   background-color: white;
   border-radius: 24px;
   padding: 2px 8px;
+}
+
+.validationMessage {
+  color: #dc2626;
+  font-size: 14px;
+  margin-top: 8px;
 }
 
 @media (max-width: 1120px) {
@@ -151,6 +156,11 @@ button:focus {
   }
   .right-column {
     margin-left: 64px;
+  }
+  .success-window,
+  .error-window {
+    max-width: 80%;
+    width: max-content;
   }
 }
 
@@ -193,11 +203,16 @@ button:focus {
   .subscribe-form {
     width: 60%;
   }
+  .success-window,
+  .error-window {
+    font-size: 14px;
+    top: 4%;
+  }
 }
 
 @media (max-width: 375px) {
   .App {
-    padding: 16px;
+    padding: 4px 16px;
   }
   h1 {
     font-size: 36px;
@@ -206,5 +221,10 @@ button:focus {
     width: 100%;
     display: flex;
     flex-direction: column;
+  }
+  .success-window,
+  .error-window {
+    top: 8%;
+    max-width: 90%;
   }
 }
