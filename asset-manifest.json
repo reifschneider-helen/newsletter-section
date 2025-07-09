@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/reifschneider-helen/newsletter-section/static/css/main.08e73a24.css",
+    "main.js": "/reifschneider-helen/newsletter-section/static/js/main.642d0c27.js",
+    "static/media/check_circle.svg": "/reifschneider-helen/newsletter-section/static/media/check_circle.02aaaa608de26b1db914.svg",
+    "index.html": "/reifschneider-helen/newsletter-section/index.html",
+    "main.08e73a24.css.map": "/reifschneider-helen/newsletter-section/static/css/main.08e73a24.css.map",
+    "main.642d0c27.js.map": "/reifschneider-helen/newsletter-section/static/js/main.642d0c27.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.08e73a24.css",
+    "static/js/main.642d0c27.js"
+  ]
+}
