@@ -27,3 +27,18 @@ A modern, responsive newsletter signup component with validation and user feedba
 ```bash
 git clone https://github.com/reifschneider-helen/newsletter-section
 cd newsletter-section
+```
+2. Install dependencies:
+```bash
+npm install
+# or
+pnpm install
+```
+
+3.	Start local development server:
+```bash
+npm start
+```
+
+## 🌐 Live Demo
+➡️ https://reifschneider-helen.github.io/newsletter-section/
