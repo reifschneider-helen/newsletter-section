@@ -1,39 +1,29 @@
 # 📰 Newsletter Section
 
-Dies ist eine moderne, responsive Newsletter-Anmeldung mit Validierung und Benutzerfeedback – entwickelt mit **React** und **TypeScript**.
+A modern, responsive newsletter signup component with validation and user feedback — built with **React** and **TypeScript**.
 
-## 🚀 Funktionen
+## 🚀 Features
 
-- 📧 Benutzer:innen können sich mit ihrer E-Mail anmelden
-- ✅ Validierung der E-Mail-Adresse in zwei Stufen:
-  - Prüfung auf grundlegende Struktur (`name@domain`)
-  - Prüfung auf vollständige Gültigkeit (`name@domain.tld`)
-- ❌ Individuelle Fehlermeldungen statt Browser-Popups
-- 📬 Erfolgs- und Fehlernachrichten werden in einem zentrierten Fenster angezeigt
-- 🎨 Responsive Design für verschiedene Bildschirmgrößen
-- 🖼️ Lokales Bild auf der rechten Seite
+- 📧 Users can subscribe with their email address  
+- ✅ Two-level email validation:  
+  - Basic structure check (`name@domain`)  
+  - Full validity check (`name@domain.tld`)  
+- ❌ Custom error messages instead of default browser popups  
+- 📬 Success and error messages shown in a centered modal  
+- 🎨 Responsive design for various screen sizes  
+- 🖼️ Local image displayed on the right side  
 
-## 🛠️ Verwendete Technologien
+## 🛠️ Technologies Used
 
-- **React** (mit Hooks)
-- **TypeScript**
-- **CSS** (responsives Styling mit Media Queries)
-- Fetch API für HTTP POST
-- Eingabevalidierung mit regulären Ausdrücken
+- **React** (with Hooks)  
+- **TypeScript**  
+- **CSS** (responsive styling with media queries)  
+- Fetch API for HTTP POST requests  
+- Input validation with regular expressions  
 
 ## 📦 Installation
 
-1. Repository klonen:
-git clone [https://github.com/dein-benutzername/newsletter-section](https://github.com/reifschneider-helen/newsletter-section)
+1. Clone the repository:  
+```bash
+git clone https://github.com/reifschneider-helen/newsletter-section
 cd newsletter-section
-
-2.	Abhängigkeiten installieren:
-npm install
-# oder
-pnpm install
-
-3.	Lokalen Entwicklungsserver starten:
-npm start
-
-🌐 Live-Demo
-➡️ Zur Live-Version [https://reifschneider-helen.github.io/newsletter-section/]
